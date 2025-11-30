@@ -10,8 +10,8 @@ async function fetchCustomer(id) {
   return res.json();
 }
 
-export default async function ReadPage({ query }) {
-  const { id } = query;
+export default async function ReadPage({ searchParams }) {
+  const { id } = searchParams;
   const customerInfo = await fetchCustomer(id);
 
   return (
